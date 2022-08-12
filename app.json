@@ -1,0 +1,19 @@
+{
+  "env": {
+    "MONGODB_URI": {
+      "required": true
+    },
+    "TOKEN_KEY": {
+      "required": true
+    },
+    "STRIPE_KEY": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "name": "magicpill-server",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}

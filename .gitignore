@@ -1,0 +1,10 @@
+__pycache__
+.DS_Store
+*.aes
+env
+.env
+.myenvs
+google-auth.json
+dockercfg
+credentials.env
+delete_me.json

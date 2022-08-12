@@ -1,0 +1,23 @@
+app:
+  build:
+    dockerfile: Dockerfile
+    encrypted_args_file: encrypted.myenvs
+    image: gcr.io/magicpillapp/magicpillapp
+  cached: true
+  encrypted_env_file:
+    - encrypted.myenvs
+
+codeship-gcr-dockercfg:
+  image: codeship/gcr-dockercfg-generator
+  add_docker: true
+  encrypted_env_file:
+    - encrypted.env
+
+codeship-gce-service:
+  image: codeship/google-cloud-deployment
+  add_docker: true
+  working_dir: /deploy
+  volumes:
+    - ./:/deploy
+  encrypted_env_file:
+    - encrypted.env
